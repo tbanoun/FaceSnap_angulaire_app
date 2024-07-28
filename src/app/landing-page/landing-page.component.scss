@@ -1,0 +1,19 @@
+.landing-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.landing-links {
+width: 100%;
+text-align: center;
+}
+
+.btn-snap{
+width: 200px;
+font-size: 14px;
+background-color: blue;
+color: white;
+border-radius: 20px;
+}

@@ -1,0 +1,23 @@
+<div class="face-snap-card" [ngClass]="{snapped: snaps}">
+    <h1>{{ faceSnap.title | uppercase }}</h1>
+    <h1>{{ faceSnap.title | lowercase }}</h1>
+    <h1>{{ faceSnap.title | titlecase }}</h1>
+    @if (faceSnap.imageUrl){
+        <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    }
+    @else{
+        <img  src="https://cdn.pixabay.com/photo/2018/07/25/18/36/ecommerce-3562005_1280.jpg" alt="Eroor" srcset="">
+    }
+    <p>{{ faceSnap.description }}</p>
+    <p>FaceSnap créée le {{ faceSnap.createDate | date: 'EEEE d MMM YYYY à HH:mm' }}</p>
+    <p>
+        <span>Moyene sur 20: {{ 17.12367 | number: '1.2-2' }} /20</span> <br>
+        <span>Pourcentage moyene: {{ 0.12367 | percent: '1.2-2' }}</span><br>
+        <span>Chiffre d'affiare: {{ 5.12367 | currency: 'EUR' : 'code' : '1.0-3' }}</span>
+    </p>
+    <p>
+        <button class="btn-snap" (click)="onSnap()">oh! snap</button>
+        <a [href]="faceSnap.imageUrl" [ngClass]="{activeLink: !snaps}">🤌 {{ msg }}</a>
+        </p>
+        <button (click)="onView()">View</button>
+</div>

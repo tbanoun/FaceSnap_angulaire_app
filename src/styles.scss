@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+
+.face-snap-card {
+width: 35%;
+img {
+    width: 100%;
+}
+}
+.btn-snap{
+    background-color: blue;
+    color: white;
+    border: 1px black dotted;
+    border-radius: 10%;
+    width: 70px;
+}
